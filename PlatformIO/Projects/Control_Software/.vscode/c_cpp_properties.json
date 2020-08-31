@@ -1,0 +1,77 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/include",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/src",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/SimpleTimer",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/SdFat-master/src",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/RTClib-master",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/CmdMessenger",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/CmdMessenger/utility",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Adafruit_ADS1X15",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/variants/mega",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Adafruit_Circuit_Playground",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Adafruit_Circuit_Playground/utility",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Servo/src",
+                "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/SpacebrewYun/src",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/ga69fej/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/include",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/src",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/SimpleTimer",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/SdFat-master/src",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/RTClib-master",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/CmdMessenger",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/CmdMessenger/utility",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Adafruit_ADS1X15",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/variants/mega",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Adafruit_Circuit_Playground",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Adafruit_Circuit_Playground/utility",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/Servo/src",
+                    "c:/Pruefstand_Software/pr-fstand/PlatformIO/Projects/Control_Software/lib/SpacebrewYun/src",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/ga69fej/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/ga69fej/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40304",
+                "ARDUINO_AVR_MEGA2560",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega2560__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "C:/Users/ga69fej/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega2560",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
