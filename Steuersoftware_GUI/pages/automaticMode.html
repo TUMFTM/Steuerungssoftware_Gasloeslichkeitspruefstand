@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="./styles/automaticMode.css">
+    <script src="./functions/automaticMode.js" async></script>
+</head>
+  <body>
+      <button id="backButton" class="backButton" onclick="backToHome()">back</button>
+      
+      <h1>Parametrization</h1>
+      <fieldset id="paramField">
+        <!-- <div>
+        <label class="input-label">Drucksensor ID no. 1:</label><input class="intParameter" type="number" value="1">
+        <label class="input-label">Drucksensor ID no. 2:</label><input class="intParameter" type="number" value="1">
+        </div> -->
+        <!-- <div>
+         <label class="input-label">Temparatursensor ID: </label><input class="intParameter" type="number" value="1">
+        <label class="input-label">Funktionstyp:</label><input class="intParameter" type="number" value="1">
+        </div> -->
+        <div>
+        <label class="input-label">Temperierzeit: (min)</label><input class="intParameter" type="number" value="0">
+        <label class="input-label">Temperierdruck: (0.1 bar) </label><input class="intParameter" type="number" value="20"> <!--index 5-->
+        </div>
+        <div>
+        <label class="input-label">Vorkonditionierzeit: (min)</label><input id="preCondTime" class="intParameter" type="number" value="340">
+        <label class="input-label">Vorkonditionierdruck (0.1 bar):</label><input class="intParameter" type="number" value="20">
+        </div>
+        <div>
+        <label class="input-label">Versuchszeit: (min)</label><input class="intParameter" type="number" value="300">
+        <label class="input-label">Versuchsdruck: (0.1 bar)</label><input class="intParameter" type="number" value="50">
+        </div>
+        <div>
+        <label class="input-label">Nachkonditionierzeit: (min)</label><input class="intParameter" type="number" value="180">
+        <label class="input-label">Nachkonditionierdruck: (0.1 bar)</label><input class="intParameter" type="number" value="20">
+        </div>
+        <div>
+        <label class="input-label">Entspannungszeit: (min)</label><input class="intParameter" type="number" value="0">
+        <label class="input-label">Entspannungsdruck: (0.1 bar)</label><input class="intParameter" type="number" value="20">
+        </div>
+        <div>
+        <label class="input-label">Samplerate (pro 10s):</label><input class="intParameter" type="number" value="100">
+        <label class="input-label">Rührerdrehzahl: (Umdrehungen/min)</label><input class="intParameter" type="number" value="700">
+        </div>
+        <div>
+        <label class="input-label">Rührpause w. Verdichtung: (sek)</label><input class="intParameter" type="number" value="20">
+        <label class="input-label">Rührpause w. Entspannung: (sek)</label><input class="intParameter" type="number" value="20"> <!--index 17-->
+        </div>
+        <div>
+          <label class="input-label">Anzahl Durchläufe</label><input id="numberLoops" class="intParameter" type="number" value="8"> <!--index 17-->
+          <label class="input-label">Vorkonditionierzeit für > 1 Durchläufe: </label><input id="preCondTimeLoop" type="number" value="10"> <!--index 17-->
+          
+        </div>
+        <!-- <label>Solltemperatur: (°C)</label><input class="intParameter" type="number" value="25"> -->
+        <div class="bool-parameter-field">
+          <div>
+          <label>Rühren w. Temperieren:</label><input class="boolParameter" type="checkbox" checked>
+          <label>Rühren w. Vorkondi:</label><input class="boolParameter" type="checkbox" checked>
+          <label>Rühren w. Versuch:</label><input class="boolParameter" type="checkbox" checked>
+          </div>
+          <div>
+          <label>Rühren w. Nachkondi:</label><input class="boolParameter" type="checkbox" checked> 
+          <label>Rühren w. Entspannung:</label><input class="boolParameter" type="checkbox" checked>
+          </div>
+        </div>
+        <div>
+        <div>
+          <label>Reglergain:</label><input class="doubleParameter" type="number" value="0.8">
+          <label>Polytropenexponent:</label><input class="doubleParameter" type="number" value="1.4">
+        </div>
+      </br>
+        <label>Flüssigkeit:</label><input class="stringParameter" type="text" maxlength="20" value="H404">
+      </br>
+        <button id="applyConfigButton" onclick="applyConfiguration()">Apply config</button>
+        <img id="configCheckmark" class="checkmark" src="../assets/iconfinder_Checkmark_1891021.svg">
+      </fieldset>
+    
+    
+      <h1>Filling</h1>
+      <fieldset id="fillingField">
+      <label>Flüssigkeitsvolumen (in ml):</label>
+      <input style="width: 100px;" id="oilAmountInput" class="intParameter" placeholder="Test Fluid volume in ml" type="number" value="80"><br>
+      <button id="driveOutButton" onclick="fillingMode('o')">positioning drive out Fluid</button> <br>
+
+      <label>Luftvolumen (in ml):</label>
+      <input style="width: 100px;" id="airAmountInput" class="intParameter" placeholder="Test air volume in ml" type="number" value="405"><br>
+      <button id="driveInButton" onclick="fillingMode('a')">Positioning drive out Air</button>
+      </br>
+      <button id="stopPositioning" onclick="fillingMode('s')">Stop Positioning</button>
+      <img id="fillingCheckmark" class="checkmark" src="../assets/iconfinder_Checkmark_1891021.svg">
+    </fieldset>
+
+    <h1>Start/Stop measurement</h1>
+    <div class="start-stop-field">  
+    <button id="startMeasurementButton" type="button" onclick="startStopMeasurement(true)">Start Measurement!</button>
+    <button id="stopMeasurementButton"type="button" onclick="startStopMeasurement(false)" disabled>Stop Measurement!</button>
+    </div>
+    <h2>Realtime Output</h2>
+    <fieldset >
+      <label>Pressure: <span id="pressureSpan"class="parameterOutput" >--</span></label>
+      <label>Temparature: <span id="temparatureSpan"class="parameterOutput">--</span></label>
+      <label>Timer: <span id="timerSpan"class="parameterOutput">--</span></label>
+      <label>Target Speed: <span id="targetSpeed"class="parameterOutput">--</span></label>
+   </fieldset>
+   <div>Measurement: <span id="currentMeasurementDisplay">--</span></div>
+  </body>
+</html>

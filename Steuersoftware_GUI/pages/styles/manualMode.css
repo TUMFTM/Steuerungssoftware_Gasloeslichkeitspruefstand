@@ -1,0 +1,17 @@
+@import './idleMode.css';
+
+.control-field{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    height: 20vh;
+}
+
+.move-button{
+    height: 60%;
+    width: 20vw;
+}
+
+.input-field{
+    margin-bottom: 2vh;
+}

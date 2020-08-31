@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="./styles/manualMode.css">
+    <script src="./functions/manualMode.js" async></script>
+  </head>
+  <body>
+    <button class="backButton" onclick="changeToHome()">back</button>
+  
+    <div class="control-field">
+      <button id="moveUpButton" class="move-button" onmousedown="rotate(true)" ontouchstart="rotate(true)" onmouseup="stopMotor()" ontouchend="stopMotor()">move up</button>
+      <button id="moveDownButton" class="move-button" onmousedown="rotate(false)" ontouchstart="rotate(false)" onmouseup="stopMotor()" ontouchend="stopMotor()">move down</button>
+    </div>
+  
+    <div class="input-field">
+      <div>
+        <label>Control Stirrer:</label>
+        <input id="stirrerCheckbox" type="checkbox" onclick="checkboxClicked()"></input>
+      </div>
+      <div>
+        <label>Target Velocity:</label>
+        <input id="velocityInput" type="number" placeholder="targetVelocity" onkeyup="setObject('v')" value="1200" min="0" max="2000"></input>
+      </div>
+      <div>
+        <label>Acceleration:</label>
+        <input id="accelerationInput" type="number" placeholder="acceleration" onkeyup="setObject('a')" value="1000" min="0" max="2000"></input>
+      </div>
+    </div>
+  
+    <fieldset>
+      <label>Pressure: <span id="pressureSpan"class="parameterOutput" >--</span></label>
+      <label>Temparature: <span id="temparatureSpan"class="parameterOutput">--</span></label>
+    </fieldset>
+  </body>
+</html>

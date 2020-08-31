@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="./styles/idleMode.css">
+    <script src="./functions/idleMode.js" async></script>
+</head>
+  <body>
+
+    <div>
+      <button onclick="performHoming()">Perform Homing</button>
+      <button id="pressureCalibrationButton" onclick="calibratePressure()">calibrate pressure</button>
+      <button id="logData" onclick="logData()">log Data</button>
+    </div>
+    <div>
+    <button class="manual-automatic-button" onclick="openManualMode()">Manual Mode</button>
+    <button class="manual-automatic-button" onclick="openAutomaticMode()">Automatic Mode</button>
+    </div>
+
+    <h2>Realtime Output</h2>
+    <fieldset>
+      <!-- style="font-size: 40px;" -->
+      <label>Pressure: <span id="pressureSpan"class="parameterOutput">--</span></label>
+      <label>Temparature: <span id="temparatureSpan"class="parameterOutput">--</span></label>
+    </fieldset>
+  </body>
+</html>

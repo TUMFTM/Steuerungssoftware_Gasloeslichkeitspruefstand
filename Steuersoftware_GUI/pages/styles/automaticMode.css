@@ -1,0 +1,28 @@
+@import './idleMode.css';
+
+.intParameter, .stringParameter{
+    /*display: block;*/
+    margin-left: 1px;
+}
+
+.bool-parameter-field{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.50);
+    background-color: oldlace;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.start-stop-field{
+    margin-top: 5vh;
+}
+input:not(.boolParameter):not(.stringParameter){
+    width: 10vw;
+}
+
+
+.checkmark{
+    display: none;
+    width: 3vw;
+    float: right;
+}
